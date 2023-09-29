@@ -3,9 +3,31 @@ import userIcon from './images/image-jeremy.png'
 import dots from './images/ellipsis.svg'
 import work from './images/work.svg'
 import play from './images/play.svg'
+import React, {useState} from 'react'
+
 
 function App() {
+
+  const [textColor, setTextColor] = useState('hsl(235, 45%, 61%)');
+  const [WorkText, setWork] = useState('32hrs');
+  const [WorkYesterady, setYesterdayWork] = useState('7hrs')
+  const [PlayText, setPlay] = useState('10hrs');
+  const [PlayYesterday, setYesterdayPlay] = useState('2hrs')
+
+  // Function to toggle the text when the button is clicked
+  const toggleText = () => {
+    setWork(WorkText === '32hrs' ? '0hrs' : '32hrs');
+    setYesterdayWork(WorkYesterady === '7hrs' ? '0hrs' : '7hrs')
+    setPlay(PlayText === '10hrs' ? '0hrs' : '10hrs')
+    setYesterdayPlay(PlayYesterday === '2hrs' ? '0hrs' : '2hrs')
+  };
+
+  const active = () => {
+    setTextColor('white')
+  };
+
   return (
+    
     <div className="wrapper">
     {/* left box */}
     <div className="left-box">
@@ -20,12 +42,19 @@ function App() {
         </div>
         {/* div for time selection */}
         <div className="time-selection-div">
-          <button className="time-selection daily-button"><p class="button-p-daily">Daily</p></button>
-          <button className="time-selection weekly-button "><p class="button-p-weekly">Weekly</p></button>
-          <button className="time-selection monthly-button"><p class="button-p-monthly">Monthly</p></button>
+          <button onClick={toggleText} className="time-selection daily-button">
+            <p onClick={active} style={{ color: textColor }} class="button-p-daily">Daily</p>
+          </button>
+          <button className="time-selection weekly-button ">
+            <p class="button-p-weekly">Weekly</p>
+          </button>
+          <button className="time-selection monthly-button">
+            <p class="button-p-monthly">Monthly</p>
+          </button>
         </div>
       </div>
     </div>
+
     {/* right box */}
     <div className="right-box">
 
@@ -46,8 +75,8 @@ function App() {
           </div>
           {/* time div */}
           <div class="card-info">
-            <p class="current-time current-time-work">0Hrs</p>
-            <p class="whole-time whole-time-work">Yesterday - 0hrs</p>
+            <p class="current-time current-time-work">{WorkText}</p>
+            <p class="whole-time whole-time-work">Yesterday - {WorkYesterady}</p>
           </div>
           {/* info after click on three dot button */}
           <div class="after-click-div">
@@ -77,8 +106,8 @@ function App() {
           </div>
           {/* time div */}
           <div class="card-info">
-            <p class="current-time current-time-play">0Hrs</p>
-            <p class="whole-time whole-time-play">Yesterday - 0hrs</p>
+            <p class="current-time current-time-play">{PlayText}</p>
+            <p class="whole-time whole-time-play">Yesterday - {PlayYesterday}</p>
           </div>
           {/* info after click on three dot button */}
           <div class="after-click-div">

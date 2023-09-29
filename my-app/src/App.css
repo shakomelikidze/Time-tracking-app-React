@@ -328,12 +328,6 @@ body {
       color: white;
   }
 
-
-
-
-
-
-
   .activity-card-background-orange {
       width: 225px;
       height: 50px;
@@ -427,7 +421,7 @@ body {
 
   .current-time {
       font-family: 'Rubik', sans-serif;
-      font-size: 40px;
+      font-size: 50px;
       font-weight: 300;
       margin-top: 20px;
       color: white
@@ -467,4 +461,10 @@ body {
       margin-right: 5px;
   }
 
+}
+
+.click {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
 }
