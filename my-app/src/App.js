@@ -8,22 +8,42 @@ import React, {useState} from 'react'
 
 function App() {
 
-  const [textColor, setTextColor] = useState('hsl(235, 45%, 61%)');
-  const [WorkText, setWork] = useState('32hrs');
-  const [WorkYesterady, setYesterdayWork] = useState('7hrs')
-  const [PlayText, setPlay] = useState('10hrs');
-  const [PlayYesterday, setYesterdayPlay] = useState('2hrs')
+  const [DailyWorkText, setDailyWork] = useState('0hrs');
+  const [WeeklyWorkText, setWeeklyWork] = useState('0hrs');
+  const [MonthlyWorkText, setMonthlyWork] = useState('0hrs');
 
-  // Function to toggle the text when the button is clicked
-  const toggleText = () => {
-    setWork(WorkText === '32hrs' ? '0hrs' : '32hrs');
-    setYesterdayWork(WorkYesterady === '7hrs' ? '0hrs' : '7hrs')
-    setPlay(PlayText === '10hrs' ? '0hrs' : '10hrs')
-    setYesterdayPlay(PlayYesterday === '2hrs' ? '0hrs' : '2hrs')
+
+  const [DailyWorkYesterady, setYesterdayWork] = useState('0hrs')
+  const [DailyPlayText, setPlay] = useState('0hrs');
+  const [DailyPlayYesterday, setYesterdayPlay] = useState('0hrs')
+
+  // Toggle daily button
+  const toggleDailyText = () => {
+    // Today results
+    setDailyWork(DailyWorkText === '0hrs' ? '5hrs' : '0hrs');
+
+    // Yesterday results
+    setYesterdayWork(DailyWorkYesterady === '0hrs' ? '7hrs' : '0hrs')
+    setPlay(DailyPlayText === '0hrs' ? '10hrs' : '0hrs')
+    setYesterdayPlay(DailyPlayYesterday === '0hrs' ? '2hrs' : '0hrs')
   };
 
-  const active = () => {
-    setTextColor('white')
+  // Toggle weekly button
+  const toggleWeeklyText = () => {
+    // Today results
+    setWeeklyWork(WeeklyWorkText === '0hrs' ? '32hrs' : '0hrs')
+
+    // Yesterday results
+
+  };
+
+  // Toggle monthly button
+  const toggleMonthlyText = () => {
+    // Today results
+    setMonthlyWork(MonthlyWorkText === '0hrs' ? '103hrs' : '0hrs');
+
+    // Yesterday results
+
   };
 
   return (
@@ -42,14 +62,14 @@ function App() {
         </div>
         {/* div for time selection */}
         <div className="time-selection-div">
-          <button onClick={toggleText} className="time-selection daily-button">
-            <p onClick={active} style={{ color: textColor }} class="button-p-daily">Daily</p>
+          <button onClick={toggleDailyText} className="time-selection daily-button">
+            <button class="button-p-daily">Daily</button>
           </button>
-          <button className="time-selection weekly-button ">
-            <p class="button-p-weekly">Weekly</p>
+          <button onClick={toggleWeeklyText} className="time-selection weekly-button ">
+            <button class="button-p-weekly">Weekly</button>
           </button>
-          <button className="time-selection monthly-button">
-            <p class="button-p-monthly">Monthly</p>
+          <button onClick={toggleMonthlyText} className="time-selection monthly-button">
+            <button class="button-p-monthly">Monthly</button>
           </button>
         </div>
       </div>
@@ -75,8 +95,8 @@ function App() {
           </div>
           {/* time div */}
           <div class="card-info">
-            <p class="current-time current-time-work">{WorkText}</p>
-            <p class="whole-time whole-time-work">Yesterday - {WorkYesterady}</p>
+            <p class="current-time current-time-work">{DailyWorkText}</p>
+            <p class="whole-time whole-time-work">Yesterday - {DailyWorkYesterady}</p>
           </div>
           {/* info after click on three dot button */}
           <div class="after-click-div">
@@ -106,8 +126,8 @@ function App() {
           </div>
           {/* time div */}
           <div class="card-info">
-            <p class="current-time current-time-play">{PlayText}</p>
-            <p class="whole-time whole-time-play">Yesterday - {PlayYesterday}</p>
+            <p class="current-time current-time-play">{DailyPlayText}</p>
+            <p class="whole-time whole-time-play">Yesterday - {DailyPlayYesterday}</p>
           </div>
           {/* info after click on three dot button */}
           <div class="after-click-div">
