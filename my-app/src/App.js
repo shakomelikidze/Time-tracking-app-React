@@ -2,7 +2,7 @@ import './App.css';
 import userIcon from './images/image-jeremy.png'
 import play from './images/play.svg'
 import work from './images/work.svg'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Component from './Component';
 
 
@@ -10,6 +10,14 @@ function App() {
   const [dailySpentTime, setDailySpentTime] = useState('0');
   const [dailyYesterday, setDailyYesterday] = useState('0')
   const [weeklySpentTime, setWeeklySpentTime] = useState(null);
+  // const Component = (props) => {
+  //   const [dailySpentTime, setDailySpentTime] = useState(props.initialDailyValue);
+  
+  //   useEffect(() => {
+  //     if (props.dailyButtonClick) {
+  //       setDailySpentTime('');
+  //     }
+  //   }, [props.dailyButtonClick]);}
   return (
     
     <div className="wrapper">
@@ -40,6 +48,7 @@ function App() {
           image={work} 
           className='activity-card-background-orange'
           dailyValue={dailySpentTime}
+          initialDailyValue='5'
           dailyYesterday={dailyYesterday}
           weeklyValue={weeklySpentTime}
         />
@@ -48,6 +57,7 @@ function App() {
           image={play} 
           className='activity-card-background-sky-blue'
           dailyValue={dailySpentTime}
+          initialDailyValue='10'
         />
       </div>
     </div>
