@@ -76,14 +76,6 @@ body {
     justify-content: space-between;
   }
   
-  .button-p {
-    font-family: 'Rubik', sans-serif;
-    color: hsl(235, 45%, 61%);
-    font-size: 20px;
-    opacity: 0.8;
-    font-weight: 400;
-  }
-
   .activity-card {
     margin-top: 20px;
   }
@@ -142,7 +134,6 @@ body {
     background-color: hsl(43, 84%, 65%);
   }
 
-
   .data-card {
     width: 333px;
     background-color: hsl(235, 46%, 20%); 
@@ -164,308 +155,286 @@ body {
     color: white
   }
 
-  .card-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 3px;
-  }
-
   .current-time {
     font-family: 'Rubik', sans-serif;
     font-size: 28px;
     color: white
   }
 
-  .whole-time {
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    color: hsl(236, 100%, 87%);
-  }
-
-  .after-click-div {
-    width: 333px;
-    height: 37px;
-    padding: 10px 0px;
-    margin-top: 35px;
-  }
-
-  li {
-    list-style: none;
-    font-family: 'Rubik', sans-serif;
-    font-size: 13px;
+  .button-p-daily:focus {
     color: white;
-    display: inline;
-    margin-right: 53px;
+  }
+
+  .button-p-weekly:focus {
+    color: white;
+  }
+
+  .button-p-monthly:focus {
+    color: white;
+  }
+
+  .button-p-daily {
+    font-family: 'Rubik', sans-serif;
+    color: hsl(235, 45%, 61%);
+    font-size: 18px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
+
+  .button-p-weekly {
+    font-family: 'Rubik', sans-serif;
+    color: hsl(235, 45%, 61%);
+    font-size: 18px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
+
+  .button-p-monthly {
+    font-family: 'Rubik', sans-serif;
+    color: hsl(235, 45%, 61%);
+    font-size: 18px;
+    opacity: 0.8;
+    font-weight: 400;
   }
 
 }
 
 @media screen and (min-width: 1000px) {
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
-    button {
-      background: none;
-      border: none;
-    }
-    
-    .wrapper {
-      width: 990px;
-      display: flex;
-      flex-direction: row;
-    }
+  button {
+    background: none;
+    border: none;
+  }
+  
+  .wrapper {
+    width: 990px;
+    display: flex;
+    flex-direction: row;
+  }
 
-    .right-box {
-      margin-left: 25px;
-      display: flex;
-      flex-wrap: wrap;
-    }
+  .right-box {
+    margin-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .activity-card {
-      margin-right: 21px;
-    }
+  .activity-card {
+    margin-right: 21px;
+  }
 
-    .user-report {
-      width: 225px;
-      height: 318px;
-      padding: 10px 25px;
-      background-color: hsl(246, 80%, 60%);
-      border-radius: 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      position: relative;
-    }
+  .user-report {
+    width: 225px;
+    height: 318px;
+    padding: 10px 25px;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
 
-    .user-img {
-      width: 80px;
-      border: 3px solid white;
-      border-radius: 60px;
-      margin-right: 20px;
-      margin-top: 25px;
-    }
+  .user-img {
+    width: 80px;
+    border: 3px solid white;
+    border-radius: 60px;
+    margin-right: 20px;
+    margin-top: 25px;
+  }
 
-    .report-p {
-      font-family: 'Rubik', sans-serif;
-      color: hsl(236, 100%, 87%);
-      font-weight: 400;
-      font-size: 16px;
-      margin-top: 35px;
-    }
+  .report-p {
+    font-family: 'Rubik', sans-serif;
+    color: hsl(236, 100%, 87%);
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 35px;
+  }
 
-    .user-name {
-      font-family: 'Rubik', sans-serif;
-      color: white;
-      font-size: 36px;
-      font-weight: 400;
-    }
+  .user-name {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    font-size: 36px;
+    font-weight: 400;
+  }
 
-    .time-selection-div {
-      width: 225px;
-      height: 165px;
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-      background-color: hsl(235, 46%, 20%);
-      padding: 25px;
-      margin-top: -10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    
-    .button-p-daily {
-        font-family: 'Rubik', sans-serif;
-        color: hsl(235, 45%, 61%);
-        font-size: 20px;
-        opacity: 0.8;
-        font-weight: 400;
-    }
+  .time-selection-div {
+    width: 225px;
+    height: 165px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: hsl(235, 46%, 20%);
+    padding: 25px;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .button-p-daily {
+    font-family: 'Rubik', sans-serif;
+    color: hsl(235, 45%, 61%);
+    font-size: 20px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
 
-    .button-p-weekly {
-        font-family: 'Rubik', sans-serif;
-        color: hsl(235, 45%, 61%);
-        font-size: 20px;
-        opacity: 0.8;
-        font-weight: 400;
-    }
+  .button-p-weekly {
+    font-family: 'Rubik', sans-serif;
+    color: hsl(235, 45%, 61%);
+    font-size: 20px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
 
-    .button-p-monthly {
-        font-family: 'Rubik', sans-serif;
-        color: hsl(235, 45%, 61%);
-        font-size: 20px;
-        opacity: 0.8;
-        font-weight: 400;
-    }
+  .button-p-monthly {
+    font-family: 'Rubik', sans-serif;
+    color: hsl(235, 45%, 61%);
+    font-size: 20px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
 
-    .button-p-daily:hover {
-        color: white;
-        cursor: pointer;
-    }
+  .button-p-daily:hover {
+    color: white;
+    cursor: pointer;
+  }
 
-    .button-p-daily:focus {
-        color: white;
-    }
+  .button-p-daily:focus {
+    color: white;
+  }
 
-    .button-p-weekly:hover {
-        color: white;
-        cursor: pointer;
-    }
+  .button-p-weekly:hover {
+    color: white;
+    cursor: pointer;
+  }
 
-    .button-p-weekly:focus {
-        color: white;
-    }
+  .button-p-weekly:focus {
+    color: white;
+  }
 
-    .button-p-monthly:hover {
-        color: white;
-        cursor: pointer;
-    }
+  .button-p-monthly:hover {
+    color: white;
+    cursor: pointer;
+  }
 
-    .button-p-monthly:focus {
-        color: white;
-    }
+  .button-p-monthly:focus {
+    color: white;
+  }
 
-    .active {
-        color: white;
-    }
+  .active {
+    color: white;
+  }
 
-    .activity-card-background-orange {
-        width: 225px;
-        height: 50px;
-        padding-left: 130px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        background-color: hsl(15, 100%, 70%);
-    }
+  .activity-card-background-orange {
+    width: 225px;
+    height: 50px;
+    padding-left: 130px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: hsl(15, 100%, 70%);
+  }
 
-    .activity-card-background-sky-blue {
-        width: 225px;
-        height: 50px;
-        padding-left: 130px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        background-color: hsl(195, 74%, 62%);
-    }
+  .activity-card-background-sky-blue {
+    width: 225px;
+    height: 50px;
+    padding-left: 130px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: hsl(195, 74%, 62%);
+  }
 
-    .activity-card-background-pink {
-        width: 225px;
-        height: 50px;
-        padding-left: 130px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        background-color: hsl(348, 100%, 68%);
-    }
+  .activity-card-background-pink {
+    width: 225px;
+    height: 50px;
+    padding-left: 130px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: hsl(348, 100%, 68%);
+  }
 
-    .activity-card-background-green {
-        width: 225px;
-        height: 50px;
-        padding-left: 130px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        background-color: hsl(145, 58%, 55%);
-    }
+  .activity-card-background-green {
+    width: 225px;
+    height: 50px;
+    padding-left: 130px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: hsl(145, 58%, 55%);
+    margin-top: 15px;
+  }
 
-    .activity-card-background-violet {
-        width: 225px;
-        height: 50px;
-        padding-left: 130px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        background-color: hsl(264, 64%, 52%);
-    }
+  .activity-card-background-violet {
+    width: 225px;
+    height: 50px;
+    padding-left: 130px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: hsl(264, 64%, 52%);
+    margin-top: 15px;
+  }
 
-    .activity-card-background-yellow {
-        width: 225px;
-        height: 50px;
-        padding-left: 130px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        background-color: hsl(43, 84%, 65%);
-    }
+  .activity-card-background-yellow {
+    width: 225px;
+    height: 50px;
+    padding-left: 130px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: hsl(43, 84%, 65%);
+    margin-top: 15px;
+  }
 
-    .data-card {
-        width: 225px;
-        background-color: hsl(235, 46%, 20%); 
-        padding: 25px 25px 20px 25px;     
-        border-radius: 15px;
-        margin-top: -11px;
-        position: relative;
-    }
+  .data-card {
+    width: 225px;
+    background-color: hsl(235, 46%, 20%); 
+    padding: 25px 25px 20px 25px;     
+    border-radius: 15px;
+    margin-top: -11px;
+    position: relative;
+    height: 190px;
+  }
 
-    .data-card:hover {
-        background-color: hsl(235, 46%, 37%);
-    }
+  .data-card:hover {
+    background-color: hsl(235, 46%, 37%);
+    cursor: pointer;
+  }
 
-    .card-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+  .card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .card-title-p {
-        font-family: 'Rubik', sans-serif;
-        font-size: 19px;
-        color: white
-    }
+  .card-title-p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 19px;
+    color: white
+  }
 
-    .three-dots {
-        cursor: pointer;
-        height: 7px;
-    }
+  .three-dots {
+    cursor: pointer;
+    height: 7px;
+  }
 
-    .card-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 15px;
-    }
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
 
-    .current-time {
-        font-family: 'Rubik', sans-serif;
-        font-size: 50px;
-        font-weight: 300;
-        margin-top: 20px;
-        color: white
-    }
-
-    .whole-time {
-        font-family: 'Rubik', sans-serif;
-        font-size: 13px;
-        font-weight: 100;
-        margin-top: 15px;
-        color: hsl(236, 100%, 87%);
-    }
-
-    .after-click-div {
-        width: 225px;
-        height: 18px;
-        margin-top: 20px;
-        display: none;
-    }
-
-    .display-block {
-        display: block;
-        list-style: none;
-        font-family: 'Rubik', sans-serif;
-        font-size: 12px;
-        color: white;
-        display: inline;
-        margin-right: 5px;  
-    }
-
-    li {
-        list-style: none;
-        font-family: 'Rubik', sans-serif;
-        font-size: 12px;
-        color: white;
-        display: inline;
-        margin-right: 5px;
-    }
+  .current-time {
+    font-family: 'Rubik', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 20px;
+    color: white
+  }
 
 }

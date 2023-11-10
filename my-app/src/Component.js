@@ -2,7 +2,7 @@ import React from 'react'
 import dots from './images/ellipsis.svg'
 
 const Component = (props) => {
-  const {activity, image, className, dailyValue, weeklyValue, dailyYesterday, initialDailyValue} = props;
+  const {activity, image, className, dailyValue, weeklyValue, monthlyValue, activeButton} = props;
   return (
     <>
       <div className="activity-card">
@@ -20,17 +20,14 @@ const Component = (props) => {
           </div>
           {/* time div */}
           <div class="card-info">
-            <p class="current-time current-time-work">{props.dailyValue}Hrs</p>
-            <p class="whole-time whole-time-work">Yesterday - {dailyYesterday}Hrs</p>
+            <p className="current-time current-time-work">
+              {activeButton === 'daily' && dailyValue}
+              {activeButton === 'weekly' && weeklyValue}
+              {activeButton === 'monthly' && monthlyValue}
+              Hrs
+            </p>
           </div>
           {/* info after click on three dot button */}
-          <div class="after-click-div">
-            <ul class="theme-card-list">
-              <li>Rename</li>
-              <li>Save as PDF</li>
-              <li>Delete</li>
-            </ul>
-          </div>
         </div>
       </div>
     </>
